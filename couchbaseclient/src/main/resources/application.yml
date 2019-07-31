@@ -1,3 +1,29 @@
 server:
   port: 8083
 
+couchbase:
+  hosts: localhost
+  persistTo: MASTER
+  replicateTo: NONE
+  bucket: insurance
+  user: Administrator
+  password: AdminPass123
+  scanConsistency: NOT_BOUNDED
+  write-timeout: 3000
+  connect-timeout: 3000
+  disconnect-timeout: 3000
+  management-timeout: 3000
+  query-timeout: 3000
+  search-timeout: 3000
+  view-timeout: 3000
+  kv-timeout: 3000
+  keep-alive-timeout: 3000
+  analytics-timeout: 3000
+
+logging.level:
+  root: INFO
+  trycb.web: DEBUG
+  org.springframework.web: OFF
+  org.springframework.bean: OFF
+  org.springframework.code: OFF
+  com.couchbase.client: DEBUG

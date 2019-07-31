@@ -1,0 +1,7 @@
+logging.level:
+  root: INFO
+  trycb.web: DEBUG
+  org.springframework.web: OFF
+  org.springframework.bean: OFF
+  org.springframework.code: OFF
+  com.couchbase.client: DEBUG

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <logger name="org.springframework.web" level="INFO"/>
+    <logger name="com.couchbase" level="DEBUG"/>
+    <logger name="com.goeuro.insurance" level="DEBUG"/>
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%r [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <appender name="ANOTHER_CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>
+                %white(%r) %highlight(%-5level) [%blue(%thread)] %yellow(%C{1.}): %msg%n%throwable
+            </Pattern>
+        </layout>
+    </appender>
+    <root level="INFO">
+        <appender-ref ref="ANOTHER_CONSOLE"/>
+    </root>
+</configuration>
