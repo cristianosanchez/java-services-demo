@@ -1,0 +1,34 @@
+buildscript {
+    ext {
+        springBootVersion = '2.0.6.RELEASE' // Spring core 5.0.10.RELEASE
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'acme'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile("org.projectlombok:lombok:1.18.2")
+    compile("com.couchbase.client:java-client:2.7.6")
+    compile("com.couchbase.client:encryption:1.0.0")
+    compile("com.couchbase.client:core-io:1.7.6")
+    compile("io.reactivex:rxjava:1.3.8")
+
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
+}

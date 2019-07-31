@@ -1,0 +1,4 @@
+server:
+  port: 8082
+
+# properties from https://github.com/Netflix/Hystrix/wiki/Configuration
